@@ -187,36 +187,33 @@ advanced_settings:
     /* ── Mobile layout tweaks (≤ 640 px) ───────────────────────── */
     @media (max-width: 640px) {
 
-      /* Sidebar now stacks above content */
+      /* Sidebar becomes stacked, spans full width */
       .sidebar {
         position: static !important;
         width: 100% !important;
-        padding: 0 !important;            /* remove side-padding so banner touches edges */
+        padding: 0 !important;
+        background-image: url('/images/myphoto.png') !important; /* keep banner */
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: center 40% !important;  /* adjust crop */
       }
+
+      /* Banner height (also controls gap before menu) */
       .sidebar__inner {
         position: static !important;
-        transform: none !important;       /* kill translateY that left a big gap */
-        padding-top: 0.5rem !important;   /* tighter gap below banner */
+        transform: none !important;      /* remove translateY */
+        padding-top: 40vh !important;     /* exactly the banner height */
       }
 
-      /* Banner: full width, shorter, lower crop */
-      .header-image,
-      .header-image--on {
-        display: block !important;
-        width: 100% !important;
-        height: 38vh !important;          /* less vertical space so menu shows on first screen */
-        background-position: center 45% !important;  /* move window down to keep face centred */
-      }
-
-      /* Page content padding */
+      /* Main content padding */
       .page__content {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
       }
 
-      /* Slightly smaller page titles on phones */
+      /* Title size on phones */
       .intro h1 {
-        font-size: 1.6rem !important;     /* ≈ 26 px */
+        font-size: 1.6rem !important;
       }
     }
   header_js: ""
