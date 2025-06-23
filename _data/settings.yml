@@ -184,36 +184,42 @@ advanced_settings:
       text-decoration: underline !important;
     }
 
-    /* ── Mobile layout tweaks (≤ 640 px) ───────────────────────── */
+    /* ─── Mobile layout tweaks (≤ 640 px) ─────────────────────── */
     @media (max-width: 640px) {
 
-      /* Sidebar becomes stacked, spans full width */
-      .sidebar {
-        position: static !important;
+      /* Collapse fixed sidebar into a normal top block */
+      .sidebar,
+      .header-image,
+      .header-image--on {
+        position: static !important;      /* no fixed sidebar */
         width: 100% !important;
-        padding: 0 !important;
-        background-image: url('/images/myphoto.png') !important; /* keep banner */
-        background-size: cover !important;
-        background-repeat: no-repeat !important;
-        background-position: center 40% !important;  /* adjust crop */
+        height: auto !important;
       }
 
-      /* Banner height (also controls gap before menu) */
-      .sidebar__inner {
-        position: static !important;
-        transform: none !important;      /* remove translateY */
-        padding-top: 40vh !important;     /* exactly the banner height */
+      /* Shrink banner photo so it doesn't dominate */
+      .header-image,
+      .header-image--on {
+        height: 45vh !important;          /* was 58 vh on desktop */
+        background-position: center 40% !important; /* ↓ keep head visible */
+        **width: 100% !important;**
       }
 
-      /* Main content padding */
+      /*NEW – stop the theme shifting the text way down */
+                **.sidebar__inner {**
+                **position: static !important;**
+                **transform: none !important;     /* removes the big blank gap */**
+                **padding-top: 1rem !important;**
+           **}**
+
+      /* Give main content breathing room */
       .page__content {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
       }
 
-      /* Title size on phones */
+      /* Slightly smaller page titles on phones */
       .intro h1 {
-        font-size: 1.6rem !important;
+        font-size: 1.6rem !important;     /* ≈ 26 px */
       }
     }
   header_js: ""
