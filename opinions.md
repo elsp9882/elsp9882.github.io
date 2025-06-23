@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Opinions
+permalink: /opinions/
 ---
 
 ## Social Security
