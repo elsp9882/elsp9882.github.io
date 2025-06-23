@@ -164,7 +164,7 @@ advanced_settings:
   ajax_loading: false
   analytics_code: ""
   custom_styles: |
-    /* --- sidebar banner: full-width, half-height --- */
+    /* --- sidebar banner: full-width, half-height on desktop --- */
     .header-image,
     .header-image--on {
       background-image: url('/images/myphoto.png') !important;
@@ -174,16 +174,44 @@ advanced_settings:
       height: 58vh !important;
     }
 
-    /* underline page titles on Opinions, Research, Teaching, and CV */
-    body[data-page-url^="/opinions"] .intro h1,
-    body[data-page-url^="/research"] .intro h1,
-    body[data-page-url^="/teaching"] .intro h1,
-    body[data-page-url^="/cv"] .intro h1,
-    body[data-page-url^="/about"] .intro h1,
-    body[data-page-url^="/contact"] .intro h1 {
+    /* underline page titles */
+    body[data-page-url^="/opinions"]  .intro h1,
+    body[data-page-url^="/research"]  .intro h1,
+    body[data-page-url^="/teaching"]  .intro h1,
+    body[data-page-url^="/cv"]        .intro h1,
+    body[data-page-url^="/about"]     .intro h1,
+    body[data-page-url^="/contact"]   .intro h1 {
       text-decoration: underline !important;
+    }
+
+    /* ─── Mobile layout tweaks (≤ 640 px) ──────────────────────── */
+    @media (max-width: 640px) {
+
+      /* Collapse fixed sidebar into a normal top block */
+      .sidebar,
+      .header-image,
+      .header-image--on {
+        position: static !important;   /* no fixed sidebar */
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      /* Shrink banner photo so it doesn't dominate */
+      .header-image,
+      .header-image--on {
+        height: 35vh !important;       /* was 58 vh */
+      }
+
+      /* Give main content breathing room */
+      .page__content {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+
+      /* Slightly smaller page titles on phones */
+      .intro h1 {
+        font-size: 1.6rem !important;  /* ≈ 26 px */
+      }
     }
   header_js: ""
   footer_js: ""
-
-
