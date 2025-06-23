@@ -200,7 +200,7 @@ advanced_settings:
       .header-image,
       .header-image--on {
         height: 45vh !important;          /* was 58 vh on desktop */
-        background-position: center 40% !important; /* ↓ keep head visible */
+        background-position: top 40% !important; /* ↓ keep head visible */
       }
 
       /* Give main content breathing room */
