@@ -184,14 +184,14 @@ advanced_settings:
       text-decoration: underline !important;
     }
 
-    /* ─── Mobile layout tweaks (≤ 640 px) ──────────────────────── */
+    /* ─── Mobile layout tweaks (≤ 640 px) ─────────────────────── */
     @media (max-width: 640px) {
 
       /* Collapse fixed sidebar into a normal top block */
       .sidebar,
       .header-image,
       .header-image--on {
-        position: static !important;   /* no fixed sidebar */
+        position: static !important;      /* no fixed sidebar */
         width: 100% !important;
         height: auto !important;
       }
@@ -199,7 +199,8 @@ advanced_settings:
       /* Shrink banner photo so it doesn't dominate */
       .header-image,
       .header-image--on {
-        height: 35vh !important;       /* was 58 vh */
+        height: 35vh !important;          /* was 58 vh on desktop */
+        background-position: center 25% !important; /* ↓ keep head visible */
       }
 
       /* Give main content breathing room */
@@ -210,7 +211,7 @@ advanced_settings:
 
       /* Slightly smaller page titles on phones */
       .intro h1 {
-        font-size: 1.6rem !important;  /* ≈ 26 px */
+        font-size: 1.6rem !important;     /* ≈ 26 px */
       }
     }
   header_js: ""
