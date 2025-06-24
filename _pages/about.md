@@ -12,7 +12,7 @@ I was raised in Castle Rock, Colorado. I completed my undergraduate degree at th
 
 ## Academic Interests
 
-Within the field of economics, I'm interested in macroeconomics. Specifically, I'm interested in monetary economics, international finance, and macro-finance. I've been conducting research on monetary policy matters for the last few years, and I've recently begun to delve into the fiscal theory of the price level, a theory that one of my professors once told me "seems insane," but which interests me as a potential explanatory mechanism for historical cyclical patterns that might prove superior to more mainstream approaches.
+Within the field of economics, I'm interested in macroeconomics. Specifically, I'm interested in monetary economics, international finance, and macro-finance. I've been conducting research on monetary policy matters for the last few years, and I've recently begun to delve into the fiscal theory of the price level, which interests me as a potential explanatory mechanism for historical cyclical patterns that might prove superior to more mainstream approaches.
 
 Although economics is my main academic interest, it wasn't my first love as a discipline; that would be philosophy. I'm particularly enamored with philosophy of religion. I wrote an honors thesis as an undergraduate at CU Boulder, where I defended a particular formulation of Divine Command Theory. I still read philosophy, and in addition to philosophy of religion, I enjoy reading about epistemology, existentialism, and political philosophy. Some of my favorite philosophers are Thomas Aquinas, Michael Huemer (one of my college professors), Søren Kierkegaard, and Alvin Plantinga.
 
