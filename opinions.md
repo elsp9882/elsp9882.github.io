@@ -9,6 +9,9 @@ Thoughts on the American social security system.
 
 [Why Social Security Cuts Are Unavoidable](/assets/Why_Social_Security_Cuts_Are_Unavoidable.pdf)
 
+
+[Social Security's (Un)Constitutionality](/assets/Social_Security_2.pdf)
+
 ## Taxes
 Toughts on the U.S. tax system.
 
