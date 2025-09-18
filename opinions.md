@@ -7,12 +7,9 @@ permalink: /opinions/
 ## Social Security
 Thoughts on the American social security system.
 
-[Why Social Security Cuts Are Unavoidable](/assets/Why_Social_Security_Cuts_Are_Unavoidable.pdf)
+[Social Security and The General Welfare](/assets/Social_Security_and_The_General_Welfare.pdf)
 
+## Monetary Policy
+Thoughts on the Fed's Monetary Policy.
 
-[Social Security's (Un)Constitutionality](/assets/Social_Security_2.pdf)
-
-## Taxes
-Thoughts on the U.S. tax system.
-
-[Why Conservatives Should Resist Tax Hikes, Even on the Rich](/assets/Resisting_Tax_Hikes.pdf)
+[The Necessity of Monetary Discipline](/assets/The_Necessity_of_Monetary_Discipline.pdf)
