@@ -6,11 +6,11 @@ permalink: /research/
 
 ## Forward Guidance
 
-[Forward Guidance and Bank Balance Sheets](/assets/fg_shocks.pdf)
+[Forward Guidance and the Dynamics of Bank Credit](/assets/fg_shocks.pdf)
 
 ## Fiscal Theory
 
-[Fiscal Theory of the Monetary Policy with Financial Frictions and Long-Term Debt](/assets/ftpl.pdf)
+[Fiscal Theory of Monetary Policy with Financial Frictions and Long-Term Debt](/assets/ftpl.pdf)
 
 ## A Model of Risk Shocks and Treasury Convenience Yield
 
