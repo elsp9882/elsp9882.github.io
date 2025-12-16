@@ -17,24 +17,23 @@
     padding: 80px 40px;
   }
 
-  @include mq(tabletl) {
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    bottom: 0;
+@include mq(tabletl) {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  bottom: 0;
 
-    width: 30%;
-    padding: 0;
+  width: 30%;
+  padding: 0;
 
-    display: grid;
+  display: grid;
 
-    /* Photo row never smaller than 360px, can grow on taller screens */
-    grid-template-rows: clamp(360px, 45vh, 620px) 1fr;
+  /* FIXED photo row height so the name stays put under it */
+  grid-template-rows: 520px 1fr;
 
-    /* IMPORTANT: don't scroll the whole header; scroll the content row instead */
-    overflow: hidden;
-  }
+  overflow: hidden;
+}
 
   @include mq(desktop) { width: 25%; }
 }
@@ -99,9 +98,24 @@
   grid-row: 2;
 
   @include mq(tabletl) {
-    overflow: auto;
-    min-height: 0;   // critical for grid scrolling behavior
+    /* Do NOT scroll this whole area anymore */
+    overflow: hidden;
+
+    /* Must be 0 for grid children to scroll correctly */
+    min-height: 0;
+
+    /* Keep your spacing */
     padding: 40px 40px 34px;
+
+    /* Make the content area a grid:
+       Row 1: title/logo
+       Row 2: tagline
+       Row 3: menu (scrolls) */
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+
+    /* Optional but usually helpful */
+    align-content: start;
   }
 
   @include mq(laptop) {
@@ -147,10 +161,47 @@
 }
 
 /* -------------------------------------------------------------------------- */
+/* Desktop: keep name/tagline fixed under the photo                            */
+/* -------------------------------------------------------------------------- */
+
+@include mq(tabletl) {
+
+  /* If logo exists, it occupies row 1. If title exists, it occupies row 1.
+     (Only one of them is present at a time, based on your Liquid logic.) */
+  .header__logo,
+  .header__title {
+    grid-row: 1;
+    align-self: start;
+  }
+
+  .header__tagline {
+    grid-row: 2;
+    align-self: start;
+  }
+
+  /* Menu goes in row 3 and becomes the scroll area */
+  .menu {
+    grid-row: 3;
+
+    /* Critical: allows the menu row to shrink and actually scroll */
+    min-height: 0;
+
+    /* Put the scrolling here instead of on .header__content */
+    overflow: auto;
+
+    /* Keep your spacing above the menu items */
+    margin-top: 20px;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
 /* Menu (unchanged except margin tweaks)                                      */
 /* -------------------------------------------------------------------------- */
 
-.menu { @include mq(tabletl) { margin-top: 20px; } @include mq(laptop) { margin-top: 30px; } }
+.menu {
+  @include mq(laptop) { margin-top: 30px; }
+}
+
 
 .menu__toggle {
   position: absolute;
@@ -219,6 +270,7 @@
     visibility: visible;
     overflow: visible;
     opacity: 1;
+    height: 100%;
     @include transition(none);
   }
 }
@@ -277,8 +329,20 @@
   }
 }
 
-/* Fix skinny/tablet widths too (your screenshot is ~613px wide) */
+/* -------------------------------------------------------------------------- */
+/* Mobile + stacked-header fixes (below the sidebar/grid breakpoint)           */
+/* -------------------------------------------------------------------------- */
+
+/* 1) Always hide the preload/transition .header-image layer below the
+      fixed sidebar grid breakpoint */
 @media (max-width: 1023px) {
+  header.header .header-image:not(.header-image--on) {
+    display: none !important;
+  }
+}
+
+/* 2) Tiny mobile: stacked layout, responsive photo height */
+@media (max-width: 600px) {
 
   header.header {
     padding: 0 !important;
@@ -289,15 +353,15 @@
     justify-content: flex-start !important;
   }
 
-  header.header .header-image {
+  /* IMPORTANT: target only the visible image */
+  header.header .header-image--on {
     flex: 0 0 auto !important;
     width: 100% !important;
-    height: clamp(220px, 35vh, 320px) !important;
+    height: clamp(420px, 55vh, 700px) !important;   /* note: 700 not 7000 */
     aspect-ratio: auto !important;
     min-height: 0 !important;
-
-    /* ADD THIS LINE */
-    background-position: center 30% !important;
+    background-position: center 15% !important;
+    background-size: cover !important;
   }
 
   header.header .header__content {
@@ -313,14 +377,21 @@
   }
 }
 
-/* -------------------------------------------------------------------------- */
-/* Fix: the 2nd .header-image is just a preload/transition layer.
-   On mobile it must NOT take up layout space.                                */
-/* -------------------------------------------------------------------------- */
+/* 3) Medium stacked widths (still not sidebar): fixed photo height so the
+      crop doesn't shift and cut off your head */
+@media (min-width: 601px) and (max-width: 1023px) {
 
-@media (max-width: 1023px) {
-  .header .header-image:not(.header-image--on) {
-    display: none !important;
+  /* target only the visible image */
+  header.header .header-image--on {
+    width: 100% !important;
+    height: 520px !important;              /* pick: 480–600px to taste */
+    aspect-ratio: auto !important;
+    background-position: center 15% !important;
+    background-size: cover !important;
+  }
+
+  /* optional: reduce tint in this range too */
+  header.header .header-overlay {
+    background: rgba($overlay-background-color, 0.10) !important;
   }
 }
-
