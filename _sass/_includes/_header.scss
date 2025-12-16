@@ -17,23 +17,24 @@
     padding: 80px 40px;
   }
 
-@include mq(tabletl) {
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  bottom: 0;
+  @include mq(tabletl) {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    bottom: 0;
 
-  width: 30%;
-  padding: 0;
+    width: 30%;
+    padding: 0;
 
-  display: grid;
+    display: grid;
 
-  /* FIXED photo row height so the name stays put under it */
-  grid-template-rows: 520px 1fr;
+    /* Photo row never smaller than 360px, can grow on taller screens */
+    grid-template-rows: clamp(360px, 45vh, 620px) 1fr;
 
-  overflow: hidden;
-}
+    /* IMPORTANT: don't scroll the whole header; scroll the content row instead */
+    overflow: hidden;
+  }
 
   @include mq(desktop) { width: 25%; }
 }
