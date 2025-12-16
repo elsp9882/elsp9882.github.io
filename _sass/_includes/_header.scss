@@ -36,7 +36,9 @@
     overflow: hidden;
   }
 
-  @include mq(desktop) { width: 25%; }
+  @include mq(desktop) {
+    width: 25%;
+  }
 }
 
 /* -------------------------------------------------------------------------- */
@@ -67,7 +69,9 @@
   }
 }
 
-.header-image--on { opacity: 1; }
+.header-image--on {
+  opacity: 1;
+}
 
 /* -------------------------------------------------------------------------- */
 /* Header overlay                                                             */
@@ -99,24 +103,9 @@
   grid-row: 2;
 
   @include mq(tabletl) {
-    /* Do NOT scroll this whole area anymore */
-    overflow: hidden;
-
-    /* Must be 0 for grid children to scroll correctly */
-    min-height: 0;
-
-    /* Keep your spacing */
+    overflow: auto;
+    min-height: 0;   // critical for grid scrolling behavior
     padding: 40px 40px 34px;
-
-    /* Make the content area a grid:
-       Row 1: title/logo
-       Row 2: tagline
-       Row 3: menu (scrolls) */
-    display: grid;
-    grid-template-rows: auto auto 1fr;
-
-    /* Optional but usually helpful */
-    align-content: start;
   }
 
   @include mq(laptop) {
@@ -132,10 +121,17 @@
   display: block;
   width: $logo-width;
   max-width: 80%;
-  @include mq(tabletp) { float: left; max-width: 50%; }
+
+  @include mq(tabletp) {
+    float: left;
+    max-width: 50%;
+  }
 }
 
-.header__logo__img { width: 100%; height: auto; }
+.header__logo__img {
+  width: 100%;
+  height: auto;
+}
 
 .header__title {
   font-family: $title-font;
@@ -144,9 +140,18 @@
   letter-spacing: $sitetitle-spacing;
   line-height: 1;
   color: $overlay-text-color;
-  &:hover { color: $overlay-text-color; }
-  @include mq(tabletp) { font-size: $sitetitle-medium; }
-  @include mq(laptop)  { font-size: $sitetitle-large; }
+
+  &:hover {
+    color: $overlay-text-color;
+  }
+
+  @include mq(tabletp) {
+    font-size: $sitetitle-medium;
+  }
+
+  @include mq(laptop) {
+    font-size: $sitetitle-large;
+  }
 }
 
 .header__tagline {
@@ -157,41 +162,13 @@
   letter-spacing: $sitetagline-spacing;
   line-height: $sitetagline-lineheight;
   color: rgba($overlay-text-color, 0.7);
-  @include mq(tabletp) { font-size: $sitetagline-medium; }
-  @include mq(laptop)  { font-size: $sitetagline-large; }
-}
 
-/* -------------------------------------------------------------------------- */
-/* Desktop: keep name/tagline fixed under the photo                            */
-/* -------------------------------------------------------------------------- */
-
-@include mq(tabletl) {
-
-  /* If logo exists, it occupies row 1. If title exists, it occupies row 1.
-     (Only one of them is present at a time, based on your Liquid logic.) */
-  .header__logo,
-  .header__title {
-    grid-row: 1;
-    align-self: start;
+  @include mq(tabletp) {
+    font-size: $sitetagline-medium;
   }
 
-  .header__tagline {
-    grid-row: 2;
-    align-self: start;
-  }
-
-  /* Menu goes in row 3 and becomes the scroll area */
-  .menu {
-    grid-row: 3;
-
-    /* Critical: allows the menu row to shrink and actually scroll */
-    min-height: 0;
-
-    /* Put the scrolling here instead of on .header__content */
-    overflow: auto;
-
-    /* Keep your spacing above the menu items */
-    margin-top: 20px;
+  @include mq(laptop) {
+    font-size: $sitetagline-large;
   }
 }
 
@@ -200,9 +177,14 @@
 /* -------------------------------------------------------------------------- */
 
 .menu {
-  @include mq(laptop) { margin-top: 30px; }
-}
+  @include mq(tabletl) {
+    margin-top: 20px;
+  }
 
+  @include mq(laptop) {
+    margin-top: 30px;
+  }
+}
 
 .menu__toggle {
   position: absolute;
@@ -212,7 +194,10 @@
   cursor: pointer;
   font-size: 15px;
   line-height: 20px;
-  @include mq(tabletl) { display: none; }
+
+  @include mq(tabletl) {
+    display: none;
+  }
 }
 
 .menu__toggle__icon {
@@ -235,21 +220,37 @@
     background: rgba($overlay-text-color, 0.7);
   }
 
-  span:before { top: -8px; }
-  span:after  { top:  8px; }
+  span:before {
+    top: -8px;
+  }
+
+  span:after {
+    top: 8px;
+  }
 }
 
 .menu--open .menu__toggle__icon {
   span:before,
-  span:after { background: $overlay-text-color !important; }
+  span:after {
+    background: $overlay-text-color !important;
+  }
 
-  span { background-color: transparent !important; }
+  span {
+    background-color: transparent !important;
+  }
 
   span:before,
-  span:after { top: 0; }
+  span:after {
+    top: 0;
+  }
 
-  span:before { @include rotate(45); }
-  span:after  { @include rotate(-45); }
+  span:before {
+    @include rotate(45);
+  }
+
+  span:after {
+    @include rotate(-45);
+  }
 }
 
 .menu__wrap {
@@ -271,19 +272,28 @@
     visibility: visible;
     overflow: visible;
     opacity: 1;
-    height: 100%;
     @include transition(none);
   }
 }
 
-.menu--open .menu__wrap { visibility: visible; opacity: 1; }
+.menu--open .menu__wrap {
+  visibility: visible;
+  opacity: 1;
+}
 
 .menu__list {
   list-style: none;
   margin: 0 auto;
   padding: 12px 20px;
-  @include mq(tabletp) { padding: 30px 40px; }
-  @include mq(tabletl) { margin: 0; padding: 0; }
+
+  @include mq(tabletp) {
+    padding: 30px 40px;
+  }
+
+  @include mq(tabletl) {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .menu__list__item {}
@@ -294,18 +304,34 @@
   color: rgba($overlay-text-color, 0.7);
   padding: 10px 0;
 
-  &:hover   { color: $overlay-text-color; }
-  &.active-link { color: $overlay-text-color; }
+  &:hover {
+    color: $overlay-text-color;
+  }
 
-  @include mq(tabletl) { padding: 0; font-size: $menu-medium; }
-  @include mq(laptop)  { font-size: $menu-large; }
+  &.active-link {
+    color: $overlay-text-color;
+  }
+
+  @include mq(tabletl) {
+    padding: 0;
+    font-size: $menu-medium;
+  }
+
+  @include mq(laptop) {
+    font-size: $menu-large;
+  }
 }
 
 .menu__button {
   margin-top: 15px;
   padding: 15px 20px 16px;
   font-size: 13px;
-  @include mq(tabletl) { margin-top: 0; padding: 11px 20px 12px; font-size: 15px; }
+
+  @include mq(tabletl) {
+    margin-top: 0;
+    padding: 11px 20px 12px;
+    font-size: 15px;
+  }
 }
 
 /* -------------------------------------------------------------------------- */
@@ -315,9 +341,18 @@
 .header .socials {
   padding: 12px 20px;
 
-  @include mq(tabletp) { padding: 10px 40px; }
-  @include mq(tabletl) { margin: 27px 0 0; padding: 0; }
-  @include mq(laptop)  { margin-top: 35px; }
+  @include mq(tabletp) {
+    padding: 10px 40px;
+  }
+
+  @include mq(tabletl) {
+    margin: 27px 0 0;
+    padding: 0;
+  }
+
+  @include mq(laptop) {
+    margin-top: 35px;
+  }
 
   .socials__item__link {
     background: rgba($overlay-text-color, 0.7);
@@ -344,7 +379,6 @@
 
 /* 2) Tiny mobile: stacked layout, responsive photo height */
 @media (max-width: 600px) {
-
   header.header {
     padding: 0 !important;
     height: auto !important;
@@ -358,7 +392,7 @@
   header.header .header-image--on {
     flex: 0 0 auto !important;
     width: 100% !important;
-    height: clamp(420px, 55vh, 700px) !important;   /* note: 700 not 7000 */
+    height: clamp(420px, 55vh, 700px) !important;
     aspect-ratio: auto !important;
     min-height: 0 !important;
     background-position: center 15% !important;
@@ -381,17 +415,14 @@
 /* 3) Medium stacked widths (still not sidebar): fixed photo height so the
       crop doesn't shift and cut off your head */
 @media (min-width: 601px) and (max-width: 1023px) {
-
-  /* target only the visible image */
   header.header .header-image--on {
     width: 100% !important;
-    height: 520px !important;              /* pick: 480–600px to taste */
+    height: 520px !important;
     aspect-ratio: auto !important;
     background-position: center 15% !important;
     background-size: cover !important;
   }
 
-  /* optional: reduce tint in this range too */
   header.header .header-overlay {
     background: rgba($overlay-background-color, 0.10) !important;
   }
