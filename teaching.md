@@ -7,8 +7,9 @@ permalink: /teaching/
 ## Independent Instructor
 Below are courses I've taught independently with some sample syllabi:
 
-* [ECON 200: Introduction to Microeconomics](/assets/ECON_200_E_Syllabus.pdf)
+* [ECON 301: Intermediate Macroeconomics](/assets/301_Syllabus.pdf)
 * [ECON 201: Introduction to Macroeconomics](/assets/ECON_201_B_Syllabus.pdf)
+* [ECON 200: Introduction to Microeconomics](/assets/ECON_200_E_Syllabus.pdf)
 
 
 ## Teaching Assistant
