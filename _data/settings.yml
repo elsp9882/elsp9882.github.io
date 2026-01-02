@@ -15,8 +15,8 @@ menu_settings:
       url: '/'
     - title: 'Research'
       url: '/research/'
-    - title: 'Opinions'
-      url: '/opinions/'
+    - title: 'Thoughts'
+      url: '/thoughts/'
     - title: 'Teaching'
       url: '/teaching/'
     - title: 'CV'
@@ -184,42 +184,39 @@ advanced_settings:
       text-decoration: underline !important;
     }
 
-    /* ─── Mobile layout tweaks (≤ 640 px) ─────────────────────── */
+    /* ── Mobile layout tweaks (≤ 640 px) ───────────────────────── */
     @media (max-width: 640px) {
 
-      /* Collapse fixed sidebar into a normal top block */
-      .sidebar,
-      .header-image,
-      .header-image--on {
-        position: static !important;      /* no fixed sidebar */
+      /* Sidebar becomes stacked, spans full width */
+      .sidebar {
+        position: static !important;
         width: 100% !important;
-        height: auto !important;
+        padding: 0 !important;
+      }
+      .sidebar__inner {
+        position: static !important;
+        transform: none !important;
+        padding-top: 1rem !important;
       }
 
-      /* Shrink banner photo so it doesn't dominate */
+      /* Banner photo */
       .header-image,
       .header-image--on {
-        height: 45vh !important;          /* was 58 vh on desktop */
-        background-position: center 40% !important; /* ↓ keep head visible */
-        **width: 100% !important;**
+        width: 100vw !important;
+        height: 45vh !important;
+        background-position: center 40% !important;
+        background-size: cover !important;
       }
 
-      /*NEW – stop the theme shifting the text way down */
-                **.sidebar__inner {**
-                **position: static !important;**
-                **transform: none !important;     /* removes the big blank gap */**
-                **padding-top: 1rem !important;**
-           **}**
-
-      /* Give main content breathing room */
+      /* Page body padding */
       .page__content {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
       }
 
-      /* Slightly smaller page titles on phones */
+      /* Smaller titles */
       .intro h1 {
-        font-size: 1.6rem !important;     /* ≈ 26 px */
+        font-size: 1.6rem !important;
       }
     }
   header_js: ""
