@@ -14,4 +14,6 @@ Thoughts on the American Social Security System.
 
 [Social Security and The General Welfare](/assets/Social_Security_and_The_General_Welfare.pdf)
 
+## General Politics
 
+[Reaction to the Election of Zohran Mamdani](/assets/Mamdani.pdf)
