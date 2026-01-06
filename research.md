@@ -7,6 +7,7 @@ permalink: /research/
 ## Forward Guidance
 
 [Forward Guidance and the Dynamics of Bank Credit](/assets/fg_shocks.pdf)
+[Slides](/assets/FG_Presentation.pdf)
 
 ## Fiscal Theory
 
