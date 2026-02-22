@@ -15,14 +15,16 @@ menu_settings:
       url: '/'
     - title: 'Research'
       url: '/research/'
-    - title: 'Thoughts'
-      url: '/thoughts/'
+    - title: 'Opinions'
+      url: '/opinions/'
     - title: 'Teaching'
       url: '/teaching/'
     - title: 'CV'
       url: '/cv/'
     - title: 'About Me'
       url: '/about'
+    - title: 'Music'
+      url: '/music/'
     - title: 'Contact'
       url: '/contact'
 
@@ -175,11 +177,12 @@ advanced_settings:
     }
 
     /* underline page titles */
-    body[data-page-url^="/thoughts"]  .intro h1,
+    body[data-page-url^="/opinions"]  .intro h1,
     body[data-page-url^="/research"]  .intro h1,
     body[data-page-url^="/teaching"]  .intro h1,
     body[data-page-url^="/cv"]        .intro h1,
     body[data-page-url^="/about"]     .intro h1,
+    body[data-page-url^="/music"]     .intro h1,
     body[data-page-url^="/contact"]   .intro h1 {
       text-decoration: underline !important;
     }
