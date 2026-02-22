@@ -20,7 +20,7 @@ Besides English, I also speak German fluently and have been studying it for abou
 
 ## Hobbies
 
-When I have the time, I enjoy playing music. I've played guitar most of my life.
+When I have the time, I enjoy playing music. I dabble with guitar, saxophone, and piano.
 
 I also love the outdoors. The picture at the top of this page was taken at the summit of North Maroon Peak in Aspen, CO. I've climbed several of the "14ers" in Colorado and try to "bag" one of them each year. 
 
@@ -29,6 +29,18 @@ I live in Bellevue, WA with my wonderful wife Kendall.
 
 ## Social Media
 
-The link below takes you to my LinkedIn page.
+The links below take you to my social media pages.
 
-<a href="https://www.linkedin.com/in/elliot-spears/" class="button button--large">LinkedIn</a>
+<a href="https://www.linkedin.com/in/elliot-spears/"
+   class="button button--large"
+   target="_blank"
+   rel="noopener">
+  LinkedIn
+</a>
+
+<a href="https://www.youtube.com/@Elliot_Spears"
+   class="button button--large"
+   target="_blank"
+   rel="noopener">
+  YouTube
+</a>
