@@ -15,8 +15,8 @@ menu_settings:
       url: '/'
     - title: 'Research'
       url: '/research/'
-    - title: 'Opinions'
-      url: '/opinions/'
+    - title: 'Thoughts'
+      url: '/thoughts/'
     - title: 'Teaching'
       url: '/teaching/'
     - title: 'CV'
@@ -177,7 +177,7 @@ advanced_settings:
     }
 
     /* underline page titles */
-    body[data-page-url^="/opinions"]  .intro h1,
+    body[data-page-url^="/thoughts"]  .intro h1,
     body[data-page-url^="/research"]  .intro h1,
     body[data-page-url^="/teaching"]  .intro h1,
     body[data-page-url^="/cv"]        .intro h1,
