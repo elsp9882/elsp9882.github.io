@@ -33,7 +33,7 @@ permalink: /music/
 <iframe
   width="560"
   height="315"
-  src="https://www.youtube.com/embed/4ZUt7srIasA"
+  src="https://www.youtube.com/embed/zCrRSru1kl4?si=1z5H7ZGQ3zOjUbA_"
   title="YouTube video player"
   frameborder="0"
   allowfullscreen>
