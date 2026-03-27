@@ -10,6 +10,10 @@ permalink: /research/
 
 [Slides](/assets/FG_Presentation.pdf)
 
+## Government Debt
+
+[Government Debt and the Transmission of Monetary Policy to Credit](/assets/debt_gdp_credit.pdf)
+
 ## Fiscal Theory
 
 [Fiscal Theory of Monetary Policy with Financial Frictions and Long-Term Debt](/assets/ftpl.pdf)
