@@ -14,14 +14,12 @@ permalink: /research/
 
 [Government Debt and the Transmission of Monetary Policy to Credit](/assets/debt_gdp_credit.pdf)
 
+[Slides](/assets/debt_credit_slides.pdf)
+
 ## Fiscal Theory
 
 [Fiscal Theory of Monetary Policy with Financial Frictions and Long-Term Debt](/assets/ftpl.pdf)
 
 [Slides](/assets/FTPL_Slides.pdf)
-
-## A Model of Risk Shocks and Treasury Convenience Yield
-
-[(Model Setup): Global Flights to Safety: An Analysis of the Dollar Liquidity Premium and Cross-border Capital Flows](/assets/risk_shocks.pdf)
 
 
