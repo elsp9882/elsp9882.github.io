@@ -21,4 +21,6 @@ Thoughts on the American Social Security System.
 
 ## General Politics
 
+["Tax the Rich": An Exercise in Unintended Consequences](/assets/taxing_the_rich.pdf)
+
 [Reaction to the Election of Zohran Mamdani](/assets/Mamdani.pdf)
