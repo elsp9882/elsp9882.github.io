@@ -7,7 +7,7 @@ header_settings:
   logo_image: 
   logo_width: 200
   overlay_opacity: 0.7
-  header_image: /images/myphoto.png
+  header_image: /images/my_photo_4.png
 
 menu_settings:
   menu_items:
@@ -167,7 +167,7 @@ advanced_settings:
     /* --- sidebar banner: full-width, half-height on desktop --- */
     .header-image,
     .header-image--on {
-      background-image: url('/images/myphoto.png') !important;
+      background-image: url('/images/my_photo_4.png') !important;
       background-size: cover !important;
       background-repeat: no-repeat !important;
       background-position: top center !important;
