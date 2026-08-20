@@ -10,6 +10,10 @@ permalink: /research/
 
 [Slides](/assets/FG_Presentation.pdf)
 
+## Social Security
+
+[Social Security and Unfunded Government Debt](/assets/ss_debt.pdf)
+
 ## Government Debt
 
 [Government Debt and the Transmission of Monetary Policy to Credit](/assets/debt_gdp_credit.pdf)
