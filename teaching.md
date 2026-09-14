@@ -18,3 +18,7 @@ Courses I've TA'd for:
 * ECON 200: Introduction to Microeconomics
 * ECON 201: Introduction to Macroeconomics
 * OPMGT 502: Introduction to Operations Management (MBA Course)
+
+## Teaching Philosophy
+
+* [Please download my statement of teaching philosophy here](/assets/Teaching_Philosophy.pdf)
